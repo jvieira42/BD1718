@@ -56,51 +56,45 @@ VALUES
         (19,'Tata','Iguana','Verde','2015-12-20','3.5 kg','082735831ZZ6'),
         (20,'Kiara','Cão','Bulldog','2013-11-09','15 kg','104938573ZZ5'); 
         
-/*
+
 INSERT INTO Diagnóstico(id_diag, observações)  -- 15 consultas para os 15 caes
 VALUES
-		(1,'Consulta de prevenção e vacina'),
-        (2,'Consulta de prevenção e vacina'),
-        (3,'Consulta de prevenção e vacina'),
-        (4,'Consulta de prevenção e vacina'),
-        (5,'Consulta de prevenção e vacina'),
-        (6,'Consulta de prevenção e vacina'),
-        (7,'Consulta de prevenção e vacina'),
-        (8,'Consulta de prevenção e vacina'),
-        (9,'Consulta de prevenção e vacina'),
-        (10,'Consulta de prevenção e vacina'),
-        (11,'Consulta de prevenção e vacina'),
-        (12,'Consulta de prevenção e vacina'),
-        (13,'Consulta de prevenção e vacina'),
-        (14,'Consulta de prevenção e vacina'),
-        (15,'Consulta de prevenção e vacina');
-*/
+		(1,'Não andar em espaço publico por 2 semanas'),
+        (2,'Arranha(ter cuidado na prox. consulta)'),
+        (3,'Nada a obs.'),
+        (4,'Nada a obs.'),
+        (5,'Animal está saudavel mas ter percaução'),
+        (6,'Nada a obs.'),
+        (7,'Tomar 1 comprimido por dia'),
+        (8,'Pesado! Perder peso!'),
+        (9,'Nada a obs.'),
+        (10,'Não andar em espaço publico por 1 semana'),
+        (11,'Nada a obs.'),
+        (12,'Nada a obs.'),
+        (13,'Recuperação lenta, mas ainda possível'),
+        (14,'Muito Magro, acrescentar mais 1 refeição'),
+        (15,'Nada obs.');
 
-/*
-INSERT INTO Medicamentos(Diagnóstico_id, id_med, nome, dosagem)
-VALUES
-		();
-*/
 
-/*
-INSERT INTO Vacinas(Diagnóstico_id, id_vac, nome, dosagem)
+
+
+INSERT INTO Vacinas(Diagnóstico_id_diag, id_vac, nome, dosagem)
 VALUES
-		(Diagnóstico_id, id_vac, nome, dosagem),
-        (Diagnóstico_id, id_vac, nome, dosagem),
-        (Diagnóstico_id, id_vac, nome, dosagem),
-        (Diagnóstico_id, id_vac, nome, dosagem),
-        (Diagnóstico_id, id_vac, nome, dosagem),
-        (Diagnóstico_id, id_vac, nome, dosagem),
-        (Diagnóstico_id, id_vac, nome, dosagem),
-        (Diagnóstico_id, id_vac, nome, dosagem),
-        (Diagnóstico_id, id_vac, nome, dosagem),
-        (Diagnóstico_id, id_vac, nome, dosagem),
-        (Diagnóstico_id, id_vac, nome, dosagem),
-        (Diagnóstico_id, id_vac, nome, dosagem),
-        (Diagnóstico_id, id_vac, nome, dosagem),
-        (Diagnóstico_id, id_vac, nome, dosagem),
-        (Diagnóstico_id, id_vac, nome, dosagem);
-*/        
+		(1,1,'Parvovirose','10 mg'),
+        (1,2,'Leptoespirose','10 mg'),
+        (2,3,'Parvovirose', '5 mg'),
+        (3,4,'Tosse', '5 mg'),
+        (4,5,'Triplíce','5 mg'),
+        (5,6,'Parvovirose', '10 mg'),
+        (6,7,'Desparasita', '10 mg'),
+        (6,8,'Anti-Parasita', '10 mg'),
+        (7,9,'Parvovirose, ','15 mg'),
+        (12,10,'Anti-Parasita', '10 mg'),
+        (13,11,'Desparasita', '10 mg'),
+        (13,12,'Parvovirose', '10 mg' ),
+        (14,13,'Anti-Parasita', '10 mg'),
+        (15,14,'Desparasita', '10 mg'),
+        (15,15,'Tosse','5 mg');    
         
         
 
