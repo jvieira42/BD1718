@@ -76,11 +76,26 @@ VALUES
         (15,'Consulta de prevenção e vacina');
 */
 
-/*
+
 INSERT INTO Medicamentos(Diagnóstico_id, id_med, nome, dosagem)
 VALUES
-		();
-*/
+		(1,1,'Analgésico','100 mg'),
+        (2,2,'Xanax','0.25 mg'),
+        (3,3,'Antibiótico','40 mg'),
+        (4,4,'Figaron','20 mg'),
+        (5,5,'Pestikill','10 mg'),
+        (6,6,'Zovirax','200 mg'),
+        (7,7,'Raspidixine','80 mg'),
+        (8,8,'Valdespert','150 mg'),
+        (9,9,'Grintuss','50 mg'),
+        (10,10,'Camalix','129 mg'),
+        (11,11,'Jonesine','20 mg'),
+        (12,12,'Zarovina','200 mg'),
+        (13,13,'Leidon','41 mg'),
+        (14,14,'Artronat','50 mg'),
+        (15,15,'Tricovel','70 mg');
+        
+
 
 /*
 INSERT INTO Vacinas(Diagnóstico_id, id_vac, nome, dosagem)
