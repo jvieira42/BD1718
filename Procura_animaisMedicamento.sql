@@ -5,7 +5,7 @@ DELIMITER $$
 CREATE PROCEDURE FindAnimalMedicamento(IN medicamento VARCHAR(64))
 
 Begin
-SELECT * FROM Animal AS A
+SELECT A.nome AS Nome FROM Animal AS A
 	INNER JOIN Consulta AS C
     ON C.Animal_Id_Animal = A.id_Animal
 		INNER JOIN Diagnóstico AS D

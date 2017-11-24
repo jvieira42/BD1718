@@ -35,22 +35,27 @@ VALUES
         
 INSERT INTO Animal(id_animal, nome, espécie, raça, nascimento, peso, Cliente_cartão_cidadão)
 VALUES
-		(20,'Shazod','Cão','Pug','2012-06-21','9.5 kg','123533413ZZ0'),
-        (15,'Cucas','Gato','Ragdoll','2010-10-12','4.2 kg','043275817ZZ8'),
-        (9,'Ágata','Cão','Beagle','2015-02-09','5.6 kg','014560922ZZ1'),
-        (5,'Ace','Cão','Pastor-Alemão','2008-08-11','15.6 kg','156328001ZZ0'),
-        (17,'Eletro','Gato','Persa','2012-01-13','3.5 kg','076120341ZZ8'),
-        (12,'Dolly','Ovelha','Merino','2006-05-29','40.8 kg','068001853ZZ6'),
-        (25,'Rafiki','Gato','Siamês','2013-09-14','5.4 kg','135345332ZZ2'),
-        (19,'Ruca','Cão','Bulldog','2005-02-22','15.2 kg','033532140ZZ1'),
-        (28,'Lili','Gato','Bombaim','2002-05-05','3.8 kg','045212244ZZ7'),
-        (11,'Tumba','Cão','Cão-de-fila','2001-01-30','15.5 kg','082735831ZZ6'),
-        (2,'Tshabs','Cão','Salsicha','2009-10-28','4.1 kg','054738491ZZ7'),
-        (29,'Milka','Gato','Pixie-bob','2008-04-17','2.9 kg','034523569ZZ2'),
-        (10,'Ryu','Cão','São Bernardo','2002-04-12','90.9 kg','104938573ZZ5'),
-        (1,'Dona','Cão','Poodle','2011-06-27','3.5 kg','055256123ZZ3'),
-        (14,'Paquito','Cão','Pitbull','2009-08-02','35.2 kg','000000000ZZ4');
-
+		(1,'Shazod','Cão','Pug','2012-06-21','9.5 kg','123533413ZZ0'),
+        (2,'Cucas','Gato','Ragdoll','2010-10-12','4.2 kg','043275817ZZ8'),
+        (3,'Ágata','Cão','Beagle','2015-02-09','5.6 kg','014560922ZZ1'),
+        (4,'Ace','Cão','Pastor-Alemão','2008-08-11','15.6 kg','156328001ZZ0'),
+        (5,'Eletro','Gato','Persa','2012-01-13','3.5 kg','076120341ZZ8'),
+        (6,'Dolly','Ovelha','Merino','2006-05-29','40.8 kg','068001853ZZ6'),
+        (7,'Rafiki','Gato','Siamês','2013-09-14','5.4 kg','135345332ZZ2'),
+        (8,'Ruca','Cão','Bulldog','2005-02-22','15.2 kg','033532140ZZ1'),
+        (9,'Lili','Gato','Bombaim','2002-05-05','3.8 kg','045212244ZZ7'),
+        (10,'Tumba','Cão','Cão-de-fila','2001-01-30','15.5 kg','082735831ZZ6'),
+        (11,'Tshabs','Cão','Salsicha','2009-10-28','4.1 kg','054738491ZZ7'),
+        (12,'Milka','Gato','Pixie-bob','2008-04-17','2.9 kg','034523569ZZ2'),
+        (13,'Ryu','Cão','São Bernardo','2002-04-12','90.9 kg','104938573ZZ5'),
+        (14,'Dona','Cão','Poodle','2011-06-27','3.5 kg','055256123ZZ3'),
+        (15,'Paquito','Cão','Pitbull','2009-08-02','35.2 kg','000000000ZZ4'),
+		(16,'Camal','Hamster ','roborovski','2016-05-01','20 g','043275817ZZ8'),
+        (17,'Mill','Iguana','Verde','2015-12-20','3.5 kg','082735831ZZ6'),
+        (18,'Camel','Camaleão','Verde','2016-10-22','3 kg','082735831ZZ6'),
+        (19,'Tata','Iguana','Verde','2015-12-20','3.5 kg','082735831ZZ6'),
+        (20,'Kiara','Cão','Bulldog','2013-11-09','15 kg','104938573ZZ5'); 
+        
 /*
 INSERT INTO Diagnóstico(id_diag, observações)  -- 15 consultas para os 15 caes
 VALUES
