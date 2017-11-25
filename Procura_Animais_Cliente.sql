@@ -5,7 +5,7 @@ DELIMITER $$
 CREATE PROCEDURE NomeCliente(IN cliente_cc VARCHAR(64))
 
 BEGIN
-SELECT A.Nome FROM Cliente AS C
+SELECT C.nome AS 'Nome Cliente', A.Nome AS 'Nome Animal'  FROM Cliente AS C
 	INNER JOIN Animal As A
     ON A.Cliente_cartão_cidadão = C.cartão_cidadão
     WHERE (C.cartão_cidadão = cliente_cc);
