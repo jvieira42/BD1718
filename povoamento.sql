@@ -1,7 +1,6 @@
 
 USE `4patas`;
 
-SET SQL_SAFE_UPDATES = 0;
 
 
 
@@ -80,16 +79,16 @@ VALUES
         (7,'Tomar 1 comprimido por dia',7),
         (8,'Pesado! Perder peso!',8),
         (9,'Nada a obs.',9),
-        (10,'Não andar em espaço publico por 1 semana',10),
-        (11,'Nada a obs.',11),
+        (10,'Não andar em espaço publico por 1 semana',10);
+       /* (11,'Nada a obs.',11),
         (12,'Nada a obs.',12),
         (13,'Recuperação lenta, mas ainda possível',13),
         (14,'Muito Magro, acrescentar mais 1 refeição',14),
         (15,'Nada obs.',15);
+*/
 
 
-
-INSERT INTO Medicamentos(Diagnóstico_id, id_med, nome, dosagem)
+INSERT INTO Medicamentos(Diagnóstico_id_diag, id_med, nome, dosagem)
 VALUES
 		(1,1,'Analgésico','100 mg'),
         (2,2,'Xanax','0.25 mg'),
@@ -100,13 +99,13 @@ VALUES
         (7,7,'Raspidixine','80 mg'),
         (8,8,'Valdespert','150 mg'),
         (9,9,'Grintuss','50 mg'),
-        (10,10,'Camalix','129 mg'),
-        (11,11,'Jonesine','20 mg'),
+        (9,10,'Camalix','129 mg');
+        /*(11,11,'Jonesine','20 mg'),
         (12,12,'Zarovina','200 mg'),
         (13,13,'Leidon','41 mg'),
         (14,14,'Artronat','50 mg'),
         (15,15,'Tricovel','70 mg');
-
+*/
 
 INSERT INTO Vacinas(Diagnóstico_id_diag, id_vac, nome, dosagem)
 VALUES
@@ -119,12 +118,12 @@ VALUES
         (6,7,'Desparasita', '10 mg'),
         (6,8,'Anti-Parasita', '10 mg'),
         (7,9,'Parvovirose, ','15 mg'),
-        (12,10,'Anti-Parasita', '10 mg'),
-        (13,11,'Desparasita', '10 mg'),
-        (13,12,'Parvovirose', '10 mg' ),
-        (14,13,'Anti-Parasita', '10 mg'),
-        (15,14,'Desparasita', '10 mg'),
-        (15,15,'Tosse','5 mg');    
+        (9,10,'Anti-Parasita', '10 mg'),
+        (9,11,'Desparasita', '10 mg'),
+        (10,12,'Parvovirose', '10 mg' ),
+        (10,13,'Anti-Parasita', '10 mg'),
+        (10,14,'Desparasita', '10 mg'),
+        (3,15,'Tosse','5 mg')    
         
 
   
