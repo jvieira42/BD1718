@@ -33,7 +33,7 @@ ENGINE = InnoDB;
 -- Table `4Patas`.`Animal`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `4Patas`.`Animal` (
-  `id_animal` INT NOT NULL,
+  `id_animal` INT NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(32) NOT NULL,
   `espécie` VARCHAR(32) NOT NULL,
   `raça` VARCHAR(32) NOT NULL,
@@ -54,7 +54,7 @@ ENGINE = InnoDB;
 -- Table `4Patas`.`Médico`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `4Patas`.`Médico` (
-  `id_médico` INT NOT NULL,
+  `id_médico` INT NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(64) NOT NULL,
   PRIMARY KEY (`id_médico`))
 ENGINE = InnoDB;
@@ -64,7 +64,7 @@ ENGINE = InnoDB;
 -- Table `4Patas`.`Consulta`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `4Patas`.`Consulta` (
-  `id_consulta` INT NOT NULL,
+  `id_consulta` INT NOT NULL AUTO_INCREMENT,
   `data_consulta` DATE NOT NULL,
   `hora_início` TIME NOT NULL,
   `hora_fim` TIME NOT NULL,
@@ -91,7 +91,7 @@ ENGINE = InnoDB;
 -- Table `4Patas`.`Diagnóstico`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `4Patas`.`Diagnóstico` (
-  `id_diag` INT NOT NULL,
+  `id_diag` INT NOT NULL AUTO_INCREMENT,
   `observações` TEXT NOT NULL,
   `Consulta_id_consulta` INT NOT NULL,
   PRIMARY KEY (`id_diag`),

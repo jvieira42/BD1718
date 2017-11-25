@@ -2,7 +2,11 @@ USE `4patas`;
 -- Pesquisa das consultas de um médico entre duas datas
 DELIMITER $$
 CREATE PROCEDURE procedureInsertConsulta(IN dia DATE,IN horaInicio TIME,IN horaFim TIME, IN nome_m VARCHAR(64), IN nome_animal VARCHAR(64))
-Begin
+BEGIN
+    DECLARE Erro BOOL DEFAULT 0;
+    DECLARE CONTINUE HANDLER FOR SQLEXCEPTION SET Erro=1;
+    START TRANSACTION; 
+
 	SET @idMedico = (SELECT id_médico FROM médico WHERE médico.nome = nome_m);
     SET @idAnimal = (SELECT id_animal FROM animal WHERE animal.nome = nome_animal);
 	IF (SELECT COUNT(*) FROM Consulta AS C 
@@ -14,6 +18,11 @@ Begin
             INSERT INTO Consulta(id_consulta, data_consulta, hora_início, hora_fim, preço, Médico_id_médico,Animal_id_animal) VALUES(@idConsulta,dia,horaInicio,horaFim,0,@idMedico,@idAnimal);
 	
     END IF;
+    
+    IF erro
+	THEN ROLLBACK; -- caso ocorra um erro, retrocede todas as instruções MySQL que executou
+	ELSE COMMIT;
+	END IF;
 END; $$
 
 DELIMITER //
