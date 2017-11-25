@@ -72,7 +72,6 @@ CREATE TABLE IF NOT EXISTS `4Patas`.`Consulta` (
   `Médico_id_médico` INT NOT NULL,
   `Animal_id_animal` INT NOT NULL,
   PRIMARY KEY (`id_consulta`),
-  UNIQUE INDEX `hora_fim_UNIQUE` (`hora_fim` ASC),
   INDEX `fk_Consulta_Médico1_idx` (`Médico_id_médico` ASC),
   INDEX `fk_Consulta_Animal1_idx` (`Animal_id_animal` ASC),
   CONSTRAINT `fk_Consulta_Médico1`
