@@ -1,9 +1,6 @@
 
 USE `4patas`;
 
-
-
-
 INSERT INTO Cliente(cartão_cidadão, nome, email, telefone, rua, localidade, código_postal)
 VALUES 
 		('000000000ZZ4','Paula Ávila', 'paula_avila@gmail.com', 915456441, 'Travessa Doutora Judite Barata, 23', 'Leiria', '2410-385 LEIRIA'),
@@ -95,7 +92,7 @@ VALUES
         (3,3,'Antibiótico','40 mg'),
         (4,4,'Figaron','20 mg'),
         (5,5,'Pestikill','10 mg'),
-        (6,6,'Zovirax','200 mg'),
+        (6,6,'Analgésico','200 mg'),
         (7,7,'Raspidixine','80 mg'),
         (8,8,'Valdespert','150 mg'),
         (9,9,'Grintuss','50 mg'),
