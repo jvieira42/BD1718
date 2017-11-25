@@ -1,10 +1,12 @@
 USE `4patas`;
 -- Pesquisa das consultas de um médico entre duas datas
 DELIMITER $$
-CREATE PROCEDURE procedureInsertConsulta(IN dia DATE,IN horaInicio DATE,IN horaFim DATE, IN nome_m VARCHAR(64), IN nome_animal VARCHAR(64))
+CREATE PROCEDURE procedureInsertConsulta(IN dia DATE,IN horaInicio TIME,IN horaFim TIME, IN nome_m VARCHAR(64), IN nome_animal VARCHAR(64))
 IF   
 (SELECT COUNT(*) FROM Consulta AS C 
-	WHERE (C.data_consulta = dia) AND (C.hora_início = horaInicio) AND (C.hora_fim = horaFim) AND (M.nome = nome_m)) = 0
+	WHERE (C.data_consulta = dia) AND (M.nome = nome_m) AND (SELECT MAX(*)
+															 FROM (VALUES (horaInicio),(hora_início))) < (SELECT MIN(*)
+																										  FROM (VALUES (horaFim),(hora_fim)))) = 0
 BEGIN  
 	SET @idConsulta =   
         (SELECT MAX(id_consulta)   
