@@ -4,7 +4,9 @@ DELIMITER $$
 CREATE PROCEDURE procedureInsertConsulta(IN dia DATE,IN horaInicio TIME,IN horaFim TIME, IN nome_m VARCHAR(64), IN nome_animal VARCHAR(64))
 IF   
 (SELECT COUNT(*) FROM Consulta AS C 
-	WHERE (C.data_consulta = dia) AND (M.nome = nome_m) AND (SELECT MAX(horaInicio,hora_início)) < (SELECT MIN(horaFim,hora_fim))) = 0
+	WHERE (C.data_consulta = dia) AND (M.nome = nome_m) AND (SELECT MAX(*)
+															 FROM (VALUES (horaInicio),(hora_início))) < (SELECT MIN(*)
+																										  FROM (VALUES (horaFim),(hora_fim)))) = 0
 BEGIN  
 	SET @idConsulta =   
         (SELECT MAX(id_consulta)   
