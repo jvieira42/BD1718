@@ -55,25 +55,37 @@ VALUES
         (18,'Camel','Camaleão','Verde','2016-10-22','3 kg','082735831ZZ6'),
         (19,'Tata','Iguana','Verde','2015-12-20','3.5 kg','082735831ZZ6'),
         (20,'Kiara','Cão','Bulldog','2013-11-09','15 kg','104938573ZZ5'); 
-        
-
-INSERT INTO Diagnóstico(id_diag, observações)  -- 15 consultas para os 15 caes
+          
+INSERT INTO Consulta(id_consulta, data_consulta, hora_início, hora_fim, preço, Médico_id_médico, Animal_id_animal)
 VALUES
-		(1,'Não andar em espaço publico por 2 semanas'),
-        (2,'Arranha(ter cuidado na prox. consulta)'),
-        (3,'Nada a obs.'),
-        (4,'Nada a obs.'),
-        (5,'Animal está saudavel mas ter percaução'),
-        (6,'Nada a obs.'),
-        (7,'Tomar 1 comprimido por dia'),
-        (8,'Pesado! Perder peso!'),
-        (9,'Nada a obs.'),
-        (10,'Não andar em espaço publico por 1 semana'),
-        (11,'Nada a obs.'),
-        (12,'Nada a obs.'),
-        (13,'Recuperação lenta, mas ainda possível'),
-        (14,'Muito Magro, acrescentar mais 1 refeição'),
-        (15,'Nada obs.');
+		(1,'2017-08-08','09:00','10:00','50',2,1),
+        (2,'2017-08-08','10:00','11:00','50',3,15),
+        (3,'2017-08-09','09:00','10:00','50',1,3),
+        (4,'2017-08-10','10:00','11:00','20',4,9),
+        (5,'2017-08-10','15:00','15:30','30',2,4),
+        (6,'2017-08-11','10:00','11:00','20',3,10),
+        (7,'2017-08-11','11:00','12:30','40',4,9),
+		(8,'2017-08-11','14:00','14:30','40',5,6),
+		(9,'2017-08-12','11:00','12:00','40',5,11),
+		(10,'2017-08-12','14:00','14:30','40',4,13);
+
+INSERT INTO Diagnóstico(id_diag, observações,Consulta_id_consulta)  -- 15 consultas para os 15 caes
+VALUES
+		(1,'Não andar em espaço publico por 2 semanas',1),
+        (2,'Arranha(ter cuidado na prox. consulta)',2),
+        (3,'Nada a obs.',3),
+        (4,'Nada a obs.',4),
+        (5,'Angitimal está saudavel mas ter percaução',5),
+        (6,'Nada a obs.',6),
+        (7,'Tomar 1 comprimido por dia',7),
+        (8,'Pesado! Perder peso!',8),
+        (9,'Nada a obs.',9),
+        (10,'Não andar em espaço publico por 1 semana',10),
+        (11,'Nada a obs.',11),
+        (12,'Nada a obs.',12),
+        (13,'Recuperação lenta, mas ainda possível',13),
+        (14,'Muito Magro, acrescentar mais 1 refeição',14),
+        (15,'Nada obs.',15);
 
 
 
@@ -114,13 +126,7 @@ VALUES
         (15,14,'Desparasita', '10 mg'),
         (15,15,'Tosse','5 mg');    
         
-        
 
-/*
-INSERT INTO Consulta(id_consulta, data_consulta, hora_início, hora_fim, preço, Médico_id_médico, Diagnóstico_id_diag)
-VALUES
-		();
-*/  
   
 
  
