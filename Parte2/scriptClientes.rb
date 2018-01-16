@@ -28,7 +28,7 @@ clientes.each do |cliente|
 		'Código-Postal' => cliente['código_postal'],
 		'Animais' => animais.to_a
 	}
-
 end
-
-puts JSON.pretty_generate(txt)
+	txt.each do |pr|
+		puts JSON.pretty_generate(pr)
+	end

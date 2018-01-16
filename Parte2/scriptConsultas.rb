@@ -7,7 +7,7 @@ USERNAME = 'root'
 PASSWORD = ''
 
 client = Mysql2::Client.new(host: HOST, username: USERNAME, password: PASSWORD, database: DB)
-a = []
+a = []                         
 b = []
 
 consultas = client.query("SELECT C.id_consulta, C.data_consulta, C.hora_início, C.hora_fim, C.preço, C.Animal_id_animal, M.nome AS nMedico, 
@@ -39,9 +39,13 @@ consultas.each do |consulta|
 						  'Vacinas' => vacinas.to_a
 						 }
 		}
+	
+	
+
+
 	end
 
-semdiag = client.query("SELECT C.id_consulta, C.data_consulta, C.hora_início AS HoraI, C.hora_fim, C.preço, C.Animal_id_animal, M.nome AS nmedico
+semdiag = client.query("SELECT C.id_consulta, C.data_consulta, C.hora_início, C.hora_fim, C.preço, C.Animal_id_animal, M.nome AS nmedico
 						FROM Consulta AS C
 						LEFT JOIN Diagnóstico AS D
 						ON C.id_consulta = D.Consulta_id_consulta
@@ -64,4 +68,9 @@ semdiag.each do |sdiag|
 						 }
 		}
 	end
-	puts JSON.pretty_generate(a+b)
+	a.each do |pr|
+		puts JSON.pretty_generate(pr)
+	end
+	b.each do |pr1|
+		puts JSON.pretty_generate(pr1)
+	end
