@@ -11,12 +11,14 @@ a = []
 b = []
 
 consultas = client.query("SELECT C.id_consulta, C.data_consulta, C.hora_início, C.hora_fim, C.preço, C.Animal_id_animal, M.nome AS nMedico, 
-						 D.observações AS Obs, D.id_diag AS idiag, Med.nome AS medn , Med.dosagem AS medd , V.nome AS vacn, V.dosagem AS vacd
+						 D.observações AS Obs, D.id_diag AS idiag, Med.nome AS medn , Med.dosagem AS medd , V.nome AS vacn, V.dosagem AS vacd,
+						 C.Animal_id_animal
 						 FROM Diagnóstico AS D
 						 INNER JOIN Consulta AS C ON C.id_consulta = D.Consulta_id_consulta
 						 INNER JOIN Médico AS M ON M.id_médico = C.Médico_id_médico
 						 INNER JOIN Medicamentos AS Med ON Med.Diagnóstico_id_diag = D.id_diag
-						 INNER JOIN Vacinas AS V ON V.Diagnóstico_id_diag = D.id_diag")
+						 INNER JOIN Vacinas AS V ON V.Diagnóstico_id_diag = D.id_diag
+						 ")
 
 consultas.each do |consulta|
 	medicamentos = client.query("SELECT M.nome AS Nome, M.dosagem AS Dosagem
@@ -34,6 +36,7 @@ consultas.each do |consulta|
 		'Hora Fim' => consulta['hora_fim'],
 		'Preço' => consulta['preço'].to_f,
 		'Médico' => consulta['nMedico'],
+		'IDAnimal' => consulta['Animal_id_animal'],
 		'Diagnóstico' => {'Observações' => consulta['Obs'],
 						  'Medicamentos' => medicamentos.to_a,
 						  'Vacinas' => vacinas.to_a
@@ -62,6 +65,7 @@ semdiag.each do |sdiag|
 		'Hora Fim' => sdiag['hora_fim'],
 		'Preço' => sdiag['preço'].to_f,
 		'Médico' => sdiag['nmedico'],
+		'IDAnimal' => consulta['Animal_id_animal'],
 		'Diagnóstico' => {'Observações' => nil,
 						  'Medicamentos' => { 'Nome' => nil, 'Dosagem' => nil},
 						  'Vacinas' => {'Nome' => nil, 'Dosagem' => nil}
