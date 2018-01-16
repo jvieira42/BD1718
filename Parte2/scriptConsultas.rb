@@ -65,7 +65,7 @@ semdiag.each do |sdiag|
 		'Hora Fim' => sdiag['hora_fim'],
 		'Preço' => sdiag['preço'].to_f,
 		'Médico' => sdiag['nmedico'],
-		'IDAnimal' => consulta['Animal_id_animal'],
+		'IDAnimal' => sdiag['Animal_id_animal'],
 		'Diagnóstico' => {'Observações' => nil,
 						  'Medicamentos' => { 'Nome' => nil, 'Dosagem' => nil},
 						  'Vacinas' => {'Nome' => nil, 'Dosagem' => nil}
